@@ -1,0 +1,28 @@
+# Unity generated folders
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.csproj
+*.sln
+*.user
+*.userprefs
+
+# Local packages and caches
+Packages/packages-lock.json
+*.pidb
+*.booproj
+node_modules/
+bun.lockb
+bun.lock
