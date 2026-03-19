@@ -36,7 +36,7 @@ Bun is only used here as a task runner for repo commands.
 If Bun is already installed:
 
 ```bash
-/home/moebius/.bun/bin/bun --version
+bun --version
 ```
 
 If you want Bun on your PATH for this repo session:
@@ -47,6 +47,8 @@ bun --version
 ```
 
 No `bun install` step is required for this repo, because the `package.json` is only a local command manifest.
+
+If Bun is not installed, follow the official installation guide and then rerun the command above.
 
 ## Bun Commands
 
