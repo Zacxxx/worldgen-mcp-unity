@@ -1,0 +1,12 @@
+[package]
+name = "worldgen-server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+worldgen-api = { path = "../worldgen-api" }
+worldgen-core = { path = "../worldgen-core" }
+clap.workspace = true
+serde_json.workspace = true
+
