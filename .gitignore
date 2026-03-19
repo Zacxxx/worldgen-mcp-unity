@@ -26,3 +26,4 @@ Packages/packages-lock.json
 node_modules/
 bun.lockb
 bun.lock
+backend/target/
