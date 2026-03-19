@@ -1,0 +1,20 @@
+{
+  "name": "worldgen-mcp-unity",
+  "private": true,
+  "scripts": {
+    "help": "printf '%s\n' 'Available commands:' '  bun run docs:spec' '  bun run docs:rules' '  bun run docs:architecture' '  bun run backend:check' '  bun run backend:fmt' '  bun run backend:clippy' '  bun run backend:test' '  bun run backend:run' '  bun run backend:contract' '  bun run backend:clean' '  bun run repo:tree' '  bun run workspace:status'",
+    "docs:spec": "sed -n '1,240p' Docs/Specs/world_generation_mcp_spec.md",
+    "docs:rules": "sed -n '1,220p' Docs/ENGINEERING_RULES.md",
+    "docs:architecture": "sed -n '1,220p' Docs/ARCHITECTURE.md",
+    "docs:contributing": "sed -n '1,220p' CONTRIBUTING.md",
+    "backend:check": "cd backend && cargo check --workspace",
+    "backend:fmt": "cd backend && cargo fmt --all",
+    "backend:clippy": "cd backend && cargo clippy --workspace --all-targets --all-features -- -D warnings",
+    "backend:test": "cd backend && cargo test --workspace",
+    "backend:run": "cd backend && cargo run -p worldgen-server --",
+    "backend:contract": "cd backend && cargo run -p worldgen-server -- --print-contract",
+    "backend:clean": "cd backend && cargo clean",
+    "repo:tree": "find . -maxdepth 3 -type f | sed 's#^./##' | sort",
+    "workspace:status": "printf 'root: %s\nbackend: %s\ndocs: %s\n' \"$PWD\" \"$(test -d backend && echo yes || echo no)\" \"$(test -d Docs && echo yes || echo no)\""
+  }
+}
